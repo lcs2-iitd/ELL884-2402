@@ -1,0 +1,34 @@
+instructors:
+  - name: Tanmoy Chakraborty
+    profile_pic: /_images/pp/tanchak.png
+    webpage: https://tanmoychak.com
+  
+
+teaching_assistants:
+  - name: Palash Nandi
+    profile_pic: /_images/pp/palash.png
+    webpage: https://www.linkedin.com/in/palash-nandi-937b64bb/
+
+  - name: Sahil Mishra
+    profile_pic: /_images/pp/sahil.png
+    webpage: https://www.linkedin.com/in/sahilmishra0012/
+
+  - name: Aswini Kumar
+    profile_pic: /_images/pp/aswini.jpg
+    webpage: https://www.linkedin.com/in/aswini-kumar-08925572/
+
+  - name: Prottay Adhikary
+    profile_pic: /_images/pp/pro.jpg
+    webpage: https://www.linkedin.com/in/proadhikary/
+
+  - name: Vaibhav Seth
+    profile_pic: /_images/pp/vaibhav.jpeg
+    webpage: https://www.linkedin.com/in/vaibhav-1-seth/
+
+  - name: Soumyodeep Dey 
+    profile_pic: /_images/pp/soumyo.jpeg
+    webpage: https://www.linkedin.com/in/welcome-to-the-profile-of-soumyodeep/
+
+  - name: Anant Kumar
+    profile_pic: /_images/pp/anant.jpeg
+    webpage: https://www.linkedin.com/in/anant-kumar-8b8663215/
