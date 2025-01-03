@@ -6,3 +6,8 @@ items:
 - url: /schedule/
   name: Schedule
   icon_class: fas fa-calendar-alt
+
+- url: /lectures/
+  name: Materials
+  icon_class: fas fa-book-reader
+
