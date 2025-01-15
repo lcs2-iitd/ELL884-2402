@@ -7,7 +7,7 @@ title: "Course Introduction"
 
 tldr: "An introduction to the course syllabus, timeline and background."
 
-hide_from_announcments: false
+hide_from_announcments: true
 
 thumbnail: /_images/lecs/01.png
 
