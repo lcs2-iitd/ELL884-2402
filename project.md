@@ -391,3 +391,26 @@ The goal of this project is to expand an existing taxonomy by accurately finding
     "children": ["Dog", "Cat", "Whale"]
   }
   ```
+
+  **Output**
+  -	The selected parent node for the new concept.
+ 
+  **Dataset**
+  - SemEval Datasets: Science and Food
+  - WordNet Dataset
+
+**Evaluation Metrics**
+- Accuracy
+- Wu & Palmer Metric
+
+**Guidelines**
+- Use advanced LLMs (e.g., GPT-4, LLaMA) for prompt-based reasoning.
+- Experiment with different prompt templates to improve accuracy and reasoning.
+- Integrate pre-trained embedding models for semantic similarity computation.
+- Ensure that the taxonomy remains a valid DAG after expansion.
+
+**Relevant Papers and Resources**
+- [Think on Graph](https://arxiv.org/abs/2307.07697)
+- [TaxoExpan](https://arxiv.org/pdf/2001.09522)
+- [HEF](https://arxiv.org/pdf/2101.11268)
+- [QEN](https://dl.acm.org/doi/pdf/10.1145/3485447.3511943)
