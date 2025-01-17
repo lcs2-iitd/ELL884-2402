@@ -4,7 +4,7 @@ title: Project
 permalink: /project/
 ---
 
-# Project Team Formation
+# Project Team Formation and Project Selection
 
 Kindly fill out [the form](https://forms.office.com/r/wnFG7vw5ha) before 13/08/2024 11:59 PM.
 
@@ -12,21 +12,9 @@ Kindly fill out [the form](https://forms.office.com/r/wnFG7vw5ha) before 13/08/2
 
 ---
 
-# Projects Selection
+# List of Projects
 
-Please find the [list of projects](/_assignments/ELL409-Projects.pdf) attached herewith.
-
-Fill out [this form](https://forms.office.com/r/8cx1fvd2T1) to select the project. You need to fill in the top-5 preferences.
-
----
-
-# Alloted Projects
-
-Please find the allotted projects [here](/_assignments/Allotted_Projects.pdf).
-
----
-
-# Project 1: Developing a System for Table QA
+## Project 1: Developing a System for Table QA
 
 **Problem Statement**  
 The aim of this project is to develop a system capable of answering complex, free-form questions based on tabular data. Unlike simple factual QA tasks, this project requires the system to understand the question, retrieve relevant information from the table, reason about the retrieved data, and generate a coherent and contextually accurate answer in natural language.
@@ -59,7 +47,7 @@ The generated answers will be evaluated using:
 
 ---
 
-# Project 2: Building a Text-to-SQL System
+## Project 2: Building a Text-to-SQL System
 
 **Problem Statement**  
 The goal of this project is to design a system that translates natural language questions into SQL queries executable on a relational database. The system must handle complex queries involving joins, nested subqueries, and aggregation while generalizing to unseen databases.
