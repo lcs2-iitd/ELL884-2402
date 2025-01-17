@@ -8,7 +8,7 @@ permalink: /project/
 
 Kindly fill out the [form](https://forms.office.com/r/QsXSWVFdxV) (Right click to open in new tab if the form does not open) before 30/01/2025 17:00 hours.
 
-**Note:** Only one member per team should fill out the form.
+**Note:** Only one member per team should fill out the form. You need to fill in the top-5 preferences.
 
 ---
 
