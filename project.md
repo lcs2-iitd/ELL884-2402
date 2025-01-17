@@ -181,22 +181,49 @@ A weighted combination of all metrics on the test datasets. Exceeding the 1.5B p
 
 ## Project 6: Building a Multi-Model System for Optimized Natural Language Generation
 
-**Problem Statement**  
-Develop a multi-model system leveraging Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B to optimize NLG performance across summarization, question answering, and paraphrase generation.
+### Problem Statement
+The goal is to develop a multi-model system leveraging the strengths of different pre-trained models—Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B—to optimize performance across multiple NLG tasks. This involves combining models intelligently and efficiently to balance accuracy, resource usage, and task-specific optimization.
 
-**Tasks and Datasets**  
-- Summarization: CNN/DailyMail  
-- Question Answering: SQuAD 2.0  
-- Paraphrase Generation: Quora Question Pairs  
+**Recommended Techniques**:
+- **Dynamic Decision Layers**: Decide which model(s) to query based on the input.
+- **Pipeline Architectures**: Chain models for improved results.
+- **Ensemble Techniques**: Combine multiple model predictions for superior outputs.
 
-**Evaluation Metrics**  
-- Summarization: ROUGE-L  
-- Question Answering: ROUGE-L and BERTScore  
-- Paraphrase Generation: Sacre-BLEU and METEOR  
+### Tasks and Datasets
+**Tasks**:
+1. **Summarization**:
+   - Dataset: CNN/DailyMail.
+2. **Question Answering**:
+   - Dataset: SQuAD 2.0.
+3. **Paraphrase Generation**:
+   - Dataset: Quora Question Pairs.
 
-**Design Suggestions**  
-- Dynamic Decision Layers  
-- Pipeline Architectures  
-- Ensemble Techniques  
+Use the train split for training. Test split results will be evaluated.
 
+### Evaluation Metrics
+1. **Summarization**: ROUGE-L.
+2. **Question Answering**: Combination of ROUGE-L and BERTScore.
+3. **Paraphrase Generation**: Combination of Sacre-BLEU and METEOR.
+4. **Efficiency**: Inference time per query.
+
+### Guidelines
+1. **Model Constraints**: Use only Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B.
+2. **Prohibited Models**: Models explicitly fine-tuned for these tasks are not allowed.
+3. **Plagiarism Policy**: Original implementation with proper citations.
+4. **Kaggle Competition**: Adhere to competition requirements.
+
+### Deliverables
+1. **Code**: Modular and scalable system.
+2. **Report**: System architecture and performance details.
+3. **Leaderboard Submission**: Formatted outputs for test splits.
+
+---
+
+## Relevant Papers
+- **Knowledge Distillation**:
+  - [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531)
+  - [Survey on Knowledge Distillation of Large Language Models](https://arxiv.org/abs/2402.13116)
+- **Parameter-Efficient Fine-Tuning**:
+  - [LoRA: Low-Rank Adaptation of LLMs](https://arxiv.org/abs/2106.09685)
+  - [Prefix Tuning](https://arxiv.org/abs/2101.00190)
 ---
