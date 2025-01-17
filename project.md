@@ -116,3 +116,51 @@ The generated counterspeech will be evaluated on:
 **Kaggle Competition Guidelines**  
 - All experiments must be conducted within the Kaggle environment.
 - Participants are allowed to use pre-trained language models with up to 8 billion parameters.
+
+---
+
+## Project 5: Multi-Task Knowledge Distillation Framework for Natural Language Generation
+
+**Problem Statement**  
+Develop a multi-task knowledge distillation system for Natural Language Generation (NLG) that excels across summarization, question answering, and paraphrase generation by distilling a large teacher model (LLaMA-7B) into a smaller, efficient system (≤1.5B parameters).
+
+**Framework Design**  
+- Teacher Model: LLaMA-3.1-8B
+- Student System: ≤1.5B parameters
+  - Single Multi-Task Model
+  - Task-Specific Models
+  - Hybrid Approach
+
+**Tasks and Datasets**  
+- Summarization: CNN/DailyMail  
+- Question Answering: SQuAD 2.0  
+- Paraphrase Generation: Quora Question Pairs  
+
+**Evaluation Metrics**  
+- Summarization: ROUGE-L  
+- Question Answering: ROUGE-L and BERTScore  
+- Paraphrase Generation: Sacre-BLEU and METEOR  
+
+---
+
+## Project 6: Building a Multi-Model System for Optimized Natural Language Generation
+
+**Problem Statement**  
+Develop a multi-model system leveraging Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B to optimize NLG performance across summarization, question answering, and paraphrase generation.
+
+**Tasks and Datasets**  
+- Summarization: CNN/DailyMail  
+- Question Answering: SQuAD 2.0  
+- Paraphrase Generation: Quora Question Pairs  
+
+**Evaluation Metrics**  
+- Summarization: ROUGE-L  
+- Question Answering: ROUGE-L and BERTScore  
+- Paraphrase Generation: Sacre-BLEU and METEOR  
+
+**Design Suggestions**  
+- Dynamic Decision Layers  
+- Pipeline Architectures  
+- Ensemble Techniques  
+
+---
