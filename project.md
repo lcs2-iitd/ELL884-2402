@@ -349,3 +349,45 @@ To assist in designing your system, here are some relevant papers that provide i
 3. **Leaderboard Submission**: 
    - Outputs for the test splits, formatted as per the Kaggle competition requirements.
 ---
+
+# Project 7: Taxonomy Expansion Using Prompt-Based Reasoning on Graphs
+
+## Problem Statement
+
+The goal of this project is to expand an existing taxonomy by accurately finding the parent node for a new concept. Instead of relying on discrimative methods, this project utilizes advanced prompt engineering and large language models (LLMs) to "think on graphs." The system will integrate semantic and structural reasoning over the taxonomy to identify the most suitable parent node.
+
+## Framework Design
+
+### Key Objectives
+
+1. **Graph Representation**:
+   - Represent the taxonomy as a structured text-based graph, where nodes and edges are described using natural language.
+   - Include metadata such as node definitions, hierarchy levels, and relationships.
+
+2. **Prompt-Based Parent Identification**:
+   - Use structured prompts to reason about the graph and identify the best parent node.
+   - Incorporate contextual information about the graph's structure and semantics into the prompts.
+
+3. **Interactive Refinement**:
+   - Iteratively refine the parent prediction by querying the model with progressively detailed prompts incorporating feedback and additional context.
+   - You need to predict the parent node for the query term. For this, you may need to pass some possible parent nodes in the prompt to find the parent from them.
+
+### Key Components
+
+#### Graph Representation
+
+- **Input Format**:
+  - Convert the taxonomy graph into a textual representation (e.g., JSON, plain text).
+  - Include:
+    - Node names and descriptions.
+    - Parent-child relationships.
+    - Depth and sibling information (if available).
+
+- **Example**:
+  ```json
+  {
+    "node": "Mammal",
+    "description": "Warm-blooded vertebrates with hair or fur.",
+    "children": ["Dog", "Cat", "Whale"]
+  }
+  ```
