@@ -123,20 +123,14 @@ The generated counterspeech will be evaluated on:
 
 ### Problem Statement 
 
-The aim of this project is to develop a multi-task knowledge distillation system for 
-Natural Language Generation (NLG). Unlike systems designed for a single task, this 
-project requires the system to excel across multiple NLG tasks, such as summarization, 
-question answering, and paraphrase generation. The focus is on distilling the knowledge of a 
-large teacher model (LLaMA-7B) into a smaller, efficient system (≤1.5B parameters) that 
-generalizes well across diverse tasks while maintaining high performance. 
+The aim of this project is to develop a multi-task knowledge distillation system for Natural Language Generation (NLG). Unlike systems designed for a single task, this project requires the system to excel across multiple NLG tasks, such as summarization, question answering, and paraphrase generation. The focus is on distilling the knowledge of a large teacher model (LLaMA-7B) into a smaller, efficient system (≤1.5B parameters) that generalizes well across diverse tasks while maintaining high performance. 
 
 ### Framework Design 
 
 #### Teacher Model 
 
 - Model: LLaMA-3.1-8B (pre-trained). 
-- Role: Acts as the oracle, generating logits, embeddings, or task-specific outputs for 
-  training the student models. 
+- Role: Acts as the oracle, generating logits, embeddings, or task-specific outputs for training the student models. 
 
 #### Student System 
 
@@ -148,14 +142,11 @@ generalizes well across diverse tasks while maintaining high performance.
     - Separate smaller models specialized for each task. 
     - Shared encoder with task-specific decoders. 
   - Hybrid Approach: 
-    - A shared backbone (e.g., Llama-3.2-1B, ~1B parameters) with 
-      task-specific adapters or lightweight modules. 
+    - A shared backbone (e.g., Llama-3.2-1B, ~1B parameters) with task-specific adapters or lightweight modules. 
     - Use techniques like LoRA or prompt tuning. 
 - Additional Guidelines: 
-  - The student models shuold be pre-fine-tuned for any specific task. You can 
-    fine tune them using PEFT or FFT 
-  - The student system must intelligently analyze input prompts and determine 
-    task-specific processing if using task-specific models. 
+  - The student models shuold be pre-fine-tuned for any specific task. You can fine tune them using PEFT or FFT 
+  - The student system must intelligently analyze input prompts and determine task-specific processing if using task-specific models. 
 
 ### Tasks and Datasets 
 
@@ -191,27 +182,19 @@ The quality of the generated outputs will be evaluated using the following metri
 4. Efficiency: 
    - Processing time per query (the standard hardware will be announced later). 
 
-**Final Leaderboard Score**: A weighted combination of all the above metrics on the test 
-datasets. Exceeding the 1.5B parameter constraint will result in exponential penalties. 
+**Final Leaderboard Score**: A weighted combination of all the above metrics on the test datasets. Exceeding the 1.5B parameter constraint will result in exponential penalties. 
 
 ### Guidelines 
 
 1. Teacher Model Constraints: Base pre-trained LLaMA-3.1-8B. 
-2. Student Model Constraints: Open source Pre trained LLMs not fine tuned for any 
-   specific task. 
+2. Student Model Constraints: Open-source-trained LLMs are not fine-tuned for any specific task. 
 3. Plagiarism Policy: 
-   - Methods from published papers may be adapted, but the implementation 
-     must be original. 
-   - Submissions will be checked for plagiarism against web resources and team 
-     submissions. Any detected cases will result in zero marks for the project 
-     component. 
+   - Methods from published papers may be adapted, but the implementation must be original. 
+   - Submissions will be checked for plagiarism against web resources and team submissions. Any detected cases will result in zero marks for the project component. 
 4. Kaggle Competition: 
    - The project will be hosted as a Kaggle competition. 
-5. Experimentation is the king. Try to experiment with as many techniques as you 
-   can. You might also need to resort to quantization and PEFT techniques for FT 
-   - Ensure that your code runs smoothly in the Kaggle environment and 
-     generates output files that meet the competition specifications. Submission 
-     requirements may be subject to change. 
+5. Experimentation is the king. Try to experiment with as many techniques as you can. You might also need to resort to quantization and PEFT techniques for FT.
+   - Ensure that your code runs smoothly in the Kaggle environment and generates output files that meet the competition specifications. Submission requirements may be subject to change. 
 
 ### Relevant Papers 
 
@@ -246,51 +229,123 @@ datasets. Exceeding the 1.5B parameter constraint will result in exponential pen
 
 ---
 
-## Project 6: Building a Multi-Model System for Optimized Natural Language Generation
+## Project 6: Building a Multi-Model System for Optimized Natural Language Generation 
 
-### Problem Statement
-The goal is to develop a multi-model system leveraging the strengths of different pre-trained models—Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B—to optimize performance across multiple NLG tasks. This involves combining models intelligently and efficiently to balance accuracy, resource usage, and task-specific optimization.
+### Problem Statement 
 
-**Recommended Techniques**:
-- **Dynamic Decision Layers**: Decide which model(s) to query based on the input.
-- **Pipeline Architectures**: Chain models for improved results.
-- **Ensemble Techniques**: Combine multiple model predictions for superior outputs.
+The goal of this project is to develop a multi-model system that leverages the strengths of different pre-trained models—Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B—to optimize performance across multiple tasks in Natural Language Generation (NLG). Unlike traditional single-model systems, this project focuses on combining multiple models in an intelligent and efficient way to balance accuracy, resource usage, and task-specific optimization. 
 
-### Tasks and Datasets
-**Tasks**:
-1. **Summarization**:
-   - Dataset: CNN/DailyMail.
-2. **Question Answering**:
-   - Dataset: SQuAD 2.0.
-3. **Paraphrase Generation**:
-   - Dataset: Quora Question Pairs.
+Students are encouraged to design systems that use innovative techniques, including but not limited to: 
 
-Use the train split for training. Test split results will be evaluated.
+- **Dynamic Decision Layers**: Decide which model(s) to query based on the input query or task type. 
 
-### Evaluation Metrics
-1. **Summarization**: ROUGE-L.
-2. **Question Answering**: Combination of ROUGE-L and BERTScore.
-3. **Paraphrase Generation**: Combination of Sacre-BLEU and METEOR.
-4. **Efficiency**: Inference time per query.
+- **Pipeline Architectures**: Use one model’s output as the input to another, creating a chain of processing for improved results. 
 
-### Guidelines
-1. **Model Constraints**: Use only Qwen2.5-1.5B, OPT-1.3B, and LLaMA-3.2 1B.
-2. **Prohibited Models**: Models explicitly fine-tuned for these tasks are not allowed.
-3. **Plagiarism Policy**: Original implementation with proper citations.
-4. **Kaggle Competition**: Adhere to competition requirements.
+- **Ensemble Techniques**: Combine predictions from multiple models to produce a superior final output. 
 
-### Deliverables
-1. **Code**: Modular and scalable system.
-2. **Report**: System architecture and performance details.
-3. **Leaderboard Submission**: Formatted outputs for test splits.
+The challenge lies in creating an efficient system that achieves high performance across tasks while minimizing redundancy and computational cost. 
 
----
+### Tasks and Datasets 
 
-## Relevant Papers
-- **Knowledge Distillation**:
-  - [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531)
-  - [Survey on Knowledge Distillation of Large Language Models](https://arxiv.org/abs/2402.13116)
-- **Parameter-Efficient Fine-Tuning**:
-  - [LoRA: Low-Rank Adaptation of LLMs](https://arxiv.org/abs/2106.09685)
-  - [Prefix Tuning](https://arxiv.org/abs/2101.00190)
+The system will be evaluated on the following tasks and datasets: 
+
+1. **Summarization**: 
+   - Dataset: CNN/DailyMail (news articles → abstractive summaries). 
+   - Task: Generate concise and informative summaries of news articles. 
+
+2. **Question Answering**: 
+   - Dataset: SQuAD 2.0 (context + question → answer or "no answer"). 
+   - Task: Produce free-form answers based on a given context and question. 
+
+3. **Paraphrase Generation**: 
+   - Dataset: Quora Question Pairs (questions → paraphrases). 
+   - Task: Generate semantically equivalent paraphrases for input sentences. 
+
+You are only allowed to use the train split of these datasets for training purposes. The test split will be used for leaderboard evaluation. 
+
+- [https://huggingface.co/datasets/cnn_dailymail](https://huggingface.co/datasets/cnn_dailymail) 
+- [https://huggingface.co/datasets/squad](https://huggingface.co/datasets/squad) 
+- [https://huggingface.co/datasets/quora](https://huggingface.co/datasets/quora) 
+
+### Evaluation Metrics 
+
+The quality of the generated outputs will be assessed using the following metrics: 
+
+1. **Summarization**: ROUGE-L. 
+2. **Question Answering**: Combination of ROUGE-L and BERTScore. 
+3. **Paraphrase Generation**: Combination of Sacre-BLEU and METEOR. 
+4. **Efficiency**: Inference time per query will be measured, and a standard hardware 
+   specification will be announced later. 
+
+The final leaderboard score will combine all these metrics, evaluated on the test splits of 
+the specified datasets. 
+
+### Guidelines 
+
+1. **Model Constraints**: 
+   - You are only allowed to use the following pre-trained language models: 
+     - Qwen2.5-1.5B 
+     - OPT-1.3B 
+     - LLaMA-3.2 1B 
+
+   - Fine-tuning on the train splits of the specified datasets is allowed. 
+
+2. **Prohibited Models**: 
+   - Publicly available models explicitly fine-tuned for these tasks are not allowed. 
+
+3. **Plagiarism Policy**: 
+   - Methods from published papers may be adapted, but the implementation must be original, with proper citations provided. 
+   - Submissions will be checked for plagiarism against web resources and team submissions. Any detected cases of plagiarism will result in zero marks for the project component. 
+
+4. **Kaggle Competition**: 
+   - The project will be hosted as a Kaggle competition. 
+   - Details regarding the competition, including submission requirements, will be shared soon. 
+   - Ensure that your code runs smoothly in the Kaggle environment and generates output files that meet the competition specifications. Submission requirements may be subject to change. 
+
+5. Experimentation is the king. Try to experiment with as many techniques as you can. You might also need to resort to quantization and PEFT techniques for FT 
+
+### Relevant Papers 
+
+To assist in designing your system, here are some relevant papers that provide insights into multi-model systems, ensemble techniques, and decision layers: 
+
+#### Parameter Efficient Fine Tuning 
+
+1. LoRA: Low-Rank Adaptation of Large Language Models 
+   - Authors: Edward J. Hu, Yelong Shen, Phillip Wallis, et al. 
+   - Link: [https://arxiv.org/abs/2106.09685](https://arxiv.org/abs/2106.09685) 
+
+2. Prefix-Tuning: Optimizing Continuous Prompts for Generation 
+   - Authors: Xiang Lisa Li, Percy Liang 
+   - Link: [https://arxiv.org/abs/2101.00190](https://arxiv.org/abs/2101.00190) 
+
+#### Dynamic Decision Layers and Model Routing 
+
+3. Mixture of Experts 
+   - Authors: Noam Shazeer et al. 
+   - Link: [https://arxiv.org/abs/1701.06538](https://arxiv.org/abs/1701.06538) 
+
+4. AdaBERT: Task-Adaptive BERT Compression with Mixture-of-Adapters 
+   - Authors: Changlan Li et al. 
+   - Link: [https://arxiv.org/abs/2005.04861](https://arxiv.org/abs/2005.04861) 
+
+#### Ensemble and Modular Techniques 
+
+5. Ensemble Methods in Machine Learning 
+   - Authors: Thomas G. Dietterich 
+   - Link: [https://link.springer.com/chapter/10.1007/3-540-45014-9_1](https://link.springer.com/chapter/10.1007/3-540-45014-9_1) 
+
+6. RAG: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks 
+   - Authors: Patrick Lewis et al. 
+   - Link: [https://arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401) 
+
+### Deliverables 
+
+1. **Code**: 
+   - A modular and scalable system integrating multiple models. 
+
+2. **Report**: 
+   - Description of the system architecture, design decisions, and task-specific performance. 
+
+3. **Leaderboard Submission**: 
+   - Outputs for the test splits, formatted as per the Kaggle competition requirements.
 ---
