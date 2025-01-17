@@ -11,3 +11,9 @@ items:
   name: Materials
   icon_class: fas fa-book-reader
 
+- url: /project/
+  name: Project
+  icon_class: fas fa-code
+
+
+
