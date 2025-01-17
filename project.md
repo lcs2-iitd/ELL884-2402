@@ -121,52 +121,62 @@ The generated counterspeech will be evaluated on:
 
 ## Project 5: Multi-Task Knowledge Distillation Framework for Natural Language Generation
 
-**Problem Statement**  
+### Problem Statement
 The aim of this project is to develop a multi-task knowledge distillation system for Natural Language Generation (NLG). Unlike systems designed for a single task, this project requires the system to excel across multiple NLG tasks, such as summarization, question answering, and paraphrase generation. The focus is on distilling the knowledge of a large teacher model (LLaMA-7B) into a smaller, efficient system (≤1.5B parameters) that generalizes well across diverse tasks while maintaining high performance.
 
-**Framework Design**  
-- Teacher Model: LLaMA-3.1-8B
-- Student System: ≤1.5B parameters
-  - Single Multi-Task Model
-  - Task-Specific Models
-  - Hybrid Approach
- 
-- Teacher Model
-  - Model: LLaMA-3.1-8B (pre-trained).
-  - Role: Acts as the oracle, generating logits, embeddings, or task-specific outputs for training the student models.
-- Student System
-  - Constraints: Combined size ≤ 1.5B parameters.
-  - Design Choices:
-    - Single Multi-Task Model:
-      - A unified student model trained for all tasks.
-    - Task-Specific Models:
-      - Separate smaller models specialized for each task.
-      - Shared encoder with task-specific decoders.
-    - Hybrid Approach:
-      - A shared backbone (e.g., Llama-3.2-1B, ~1B parameters) with task-specific adapters or lightweight modules.
-      - Use techniques like LoRA or prompt tuning.
-    - Additional Guidelines:
-      - The student models should be pre-fine-tuned for any specific task. You can fine-tune them using PEFT or FFT
-      - The student system must intelligently analyze input prompts and determine task-specific processing if using task-specific models.
+### Framework Design
 
+#### Teacher Model
+- **Model**: LLaMA-3.1-8B (pre-trained).
+- **Role**: Acts as the oracle, generating logits, embeddings, or task-specific outputs for training the student models.
 
-**Tasks and Datasets**  
-- Summarization: CNN/DailyMail  
-- Question Answering: SQuAD 2.0  
-- Paraphrase Generation: Quora Question Pairs  
+#### Student System
+- **Constraints**: Combined size ≤ 1.5B parameters.
+- **Design Choices**:
+  - **Single Multi-Task Model**:
+    - A unified student model trained for all tasks.
+  - **Task-Specific Models**:
+    - Separate smaller models specialized for each task.
+    - Shared encoder with task-specific decoders.
+  - **Hybrid Approach**:
+    - A shared backbone (e.g., Llama-3.2-1B, ~1B parameters) with task-specific adapters or lightweight modules.
+    - Use techniques like LoRA or prompt tuning.
+- **Additional Guidelines**:
+  - Student models should be pre-fine-tuned for any specific task using PEFT or FFT.
+  - The student system must intelligently analyze input prompts and determine task-specific processing if using task-specific models.
 
-**Dataset Usage**
+### Tasks and Datasets
+**Tasks**:
+1. **Summarization**:
+   - Dataset: CNN/DailyMail (news articles → abstractive summaries).
+2. **Question Answering**:
+   - Dataset: SQuAD 2.0 (context + question → answer or "no answer").
+3. **Paraphrase Generation**:
+   - Dataset: Quora Question Pairs (questions → paraphrases).
+
+**Dataset Usage**:
 - Use only the train split for training.
 - The test split will be used for leaderboard evaluation.
 
-**Evaluation Metrics**  
-- Summarization: ROUGE-L  
-- Question Answering: ROUGE-L and BERTScore  
-- Paraphrase Generation: Sacre-BLEU and METEOR  
-- Efficiency: Processing time per query (the standard hardware will be announced later).
+### Evaluation Metrics
+1. **Summarization**: ROUGE-L.
+2. **Question Answering**: Combination of ROUGE-L and BERTScore.
+3. **Paraphrase Generation**: Combination of Sacre-BLEU and METEOR.
+4. **Efficiency**: Processing time per query (hardware specifications to be announced).
 
-**Final Leaderboard Score:** A weighted combination of all the above metrics on the test datasets. Exceeding the 1.5B parameter constraint will result in exponential penalties.
+**Final Leaderboard Score**:
+A weighted combination of all metrics on the test datasets. Exceeding the 1.5B parameter constraint results in exponential penalties.
 
+### Guidelines
+1. **Teacher Model Constraints**: Base pre-trained LLaMA-3.1-8B.
+2. **Student Model Constraints**: Open source pre-trained LLMs not fine-tuned for any specific task.
+3. **Plagiarism Policy**:
+   - Adapt methods from published papers with original implementation.
+   - Plagiarism checks against web resources and team submissions.
+4. **Kaggle Competition**:
+   - Hosted as a Kaggle competition.
+   - Ensure smooth code execution and competition-specific output format.
+   - 
 ---
 
 ## Project 6: Building a Multi-Model System for Optimized Natural Language Generation
