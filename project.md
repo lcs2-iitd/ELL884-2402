@@ -6,7 +6,7 @@ permalink: /project/
 
 # Project Team Formation and Project Selection
 
-Kindly fill out [the form](https://forms.office.com/r/wnFG7vw5ha) before 13/08/2024 11:59 PM.
+Kindly fill out the [form](https://forms.office.com/r/QsXSWVFdxV) before 30/01/2025 17:00 hours.
 
 **Note:** Only one member per team should fill out the form.
 
