@@ -76,3 +76,43 @@ The system will be evaluated on:
 - **Kaggle Competition:** The project will be hosted on Kaggle, with details and submission requirements shared soon.
 - **Model Constraints:** Use pre-trained models with a maximum of 8 billion parameters. Avoid models fine-tuned on text-to-SQL datasets.
 - **Plagiarism Policy:** Adapt methods from published papers, but ensure independent implementation and citation. Plagiarism will result in zero marks.
+
+---
+
+## Project 3: DialoCONAN Counterspeech Generation Challenge
+
+**Problem Statement**  
+Your task is to develop an advanced counterspeech generation model using the DialoCONAN dataset. The DialoCONAN dataset comprises over 3000 multi-turn fictitious dialogues between a hater and an NGO operator, covering six targets of hate. Your goal is to generate high-quality, contextually appropriate counterspeech responses given a hate speech input and dialogue history.
+
+**Dataset**  
+The DialoCONAN dataset containing multi-turn dialogues will be provided. You can split the dataset into train, validation, and test sets for your experiments. The final test data released during the competition will be disjoint from the provided dataset.
+
+**Evaluation Metrics**  
+The generated counterspeech will be evaluated on:
+- BLEU score
+- ROUGE score
+- BERTScore
+
+**Kaggle Competition Guidelines**  
+- All experiments must be conducted within the Kaggle environment.
+- Participants are allowed to use pre-trained language models with up to 8 billion parameters.
+
+---
+
+## Project 4: IntentCONANv2 Intent-Specific Counterspeech Generation
+
+**Problem Statement**  
+Your challenge is to create an intent-specific counterspeech generation model using the IntentCONANv2 dataset. The IntentCONANv2 dataset contains around 13K counterspeeches conditioned on four intents (csType): informative, denouncing, question, and positive. Your objective is to generate high-quality, intent-specific counterspeech responses to given hate speech and csType as inputs.
+
+**Dataset**  
+The IntentCONANv2 dataset will be provided, containing hate speech-counterspeech pairs with associated intents. You can split the dataset into train, validation, and test sets for your experiments. The final test data released during the competition will be disjoint from the provided dataset.
+
+**Evaluation Metrics**  
+The generated counterspeech will be evaluated on:
+- BLEU score
+- ROUGE score
+- BERTScore
+
+**Kaggle Competition Guidelines**  
+- All experiments must be conducted within the Kaggle environment.
+- Participants are allowed to use pre-trained language models with up to 8 billion parameters.
