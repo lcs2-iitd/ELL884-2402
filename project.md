@@ -12,7 +12,7 @@ Kindly fill out the [form](https://forms.office.com/r/QsXSWVFdxV) (Right click t
 
 ---
 
-# List of Projects
+<h1>List of Projects</h1>
 
 ## Project 1: Developing a System for Table QA
 
