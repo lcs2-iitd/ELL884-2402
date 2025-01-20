@@ -9,6 +9,7 @@ permalink: /project/
 Kindly fill out the [form](https://forms.office.com/r/QsXSWVFdxV) (Right click to open in new tab if the form does not open) before 30/01/2025 17:00 hours.
 
 **Note:** Only one member per team should fill out the form. You need to fill in the top-5 preferences.
+**Note:** If you want to do a project based on a self-proposed problem statement, please fill out this [form](https://forms.office.com/r/ZvCDzT41DU) and discuss it with Prof. Tanmoy after the class or meet him in his office - it is mandatory to get the professor’s approval to pursue a self-proposed project!
 
 ---
 
