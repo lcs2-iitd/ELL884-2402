@@ -352,13 +352,11 @@ To assist in designing your system, here are some relevant papers that provide i
    - Outputs for the test splits, formatted as per the Kaggle competition requirements.
 ---
 
-# Project 7: Taxonomy Expansion Using Prompt-Based Reasoning on Graphs
+## Project 7: Taxonomy Expansion Using Prompt-Based Reasoning on Graphs
 
-## Problem Statement
+### Problem Statement
 
 The goal of this project is to expand an existing taxonomy by accurately finding the parent node for a new concept. Instead of relying on discrimative methods, this project utilizes advanced prompt engineering and large language models (LLMs) to "think on graphs." The system will integrate semantic and structural reasoning over the taxonomy to identify the most suitable parent node.
-
-## Framework Design
 
 ### Key Objectives
 
