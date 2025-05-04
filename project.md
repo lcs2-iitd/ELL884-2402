@@ -350,6 +350,7 @@ To assist in designing your system, here are some relevant papers that provide i
 
 3. **Leaderboard Submission**: 
    - Outputs for the test splits, formatted as per the Kaggle competition requirements.
+
 ---
 
 ## Project 7: Taxonomy Expansion Using Prompt-Based Reasoning on Graphs
